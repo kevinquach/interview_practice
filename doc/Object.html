@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Object - RDoc Documentation</title>
+
+<link href="./fonts.css" rel="stylesheet">
+<link href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/navigation.js"></script>
+<script src="./js/search_index.js"></script>
+<script src="./js/search.js"></script>
+<script src="./js/searcher.js"></script>
+<script src="./js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">BasicObject
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-array">#array</a>
+    
+    <li ><a href="#method-i-factorial_inject">#factorial_inject</a>
+    
+    <li ><a href="#method-i-factorial_iterative">#factorial_iterative</a>
+    
+    <li ><a href="#method-i-factorial_recursive">#factorial_recursive</a>
+    
+    <li ><a href="#method-i-factorial_reduce">#factorial_reduce</a>
+    
+    <li ><a href="#method-i-factorial_tail_recursive">#factorial_tail_recursive</a>
+    
+    <li ><a href="#method-i-iter_palindrome">#iter_palindrome</a>
+    
+    <li ><a href="#method-i-iteration">#iteration</a>
+    
+    <li ><a href="#method-i-matrix">#matrix</a>
+    
+    <li ><a href="#method-i-palindrome">#palindrome</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Object">
+  <h1 id="class-Object" class="class">
+    class Object
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="FIB_MATRIX">FIB_MATRIX
+        
+        <dd>
+        
+      
+        <dt id="LIMIT">LIMIT
+        
+        <dd>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-array" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">array</span><span
+            class="method-args">(num)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="array-source">
+            <pre><span class="ruby-comment"># File fib_matrix.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">array</span>(<span class="ruby-identifier">num</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">num</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span>
+    <span class="ruby-identifier">num</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">numbers</span> = [<span class="ruby-value">0</span>, <span class="ruby-value">1</span>]
+    (<span class="ruby-identifier">num</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">numbers</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">numbers</span>[<span class="ruby-value">-1</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">numbers</span>[<span class="ruby-value">-2</span>])
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">numbers</span>[<span class="ruby-value">-1</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-factorial_inject" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">factorial_inject</span><span
+            class="method-args">(n)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Iterative with Range#inject</p>
+          
+          
+
+          
+          <div class="method-source-code" id="factorial_inject-source">
+            <pre><span class="ruby-comment"># File factorial.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">factorial_inject</span>(<span class="ruby-identifier">n</span>)
+  (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-identifier">n</span>).<span class="ruby-identifier">inject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">prod</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">prod</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">i</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-factorial_iterative" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">factorial_iterative</span><span
+            class="method-args">(n)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Iterative with Range#each</p>
+          
+          
+
+          
+          <div class="method-source-code" id="factorial_iterative-source">
+            <pre><span class="ruby-comment"># File factorial.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">factorial_iterative</span>(<span class="ruby-identifier">n</span>)
+  (<span class="ruby-value">2</span> <span class="ruby-operator">..</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">*=</span> <span class="ruby-identifier">i</span>}
+  <span class="ruby-identifier">n</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-factorial_recursive" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">factorial_recursive</span><span
+            class="method-args">(n)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Recursive</p>
+          
+          
+
+          
+          <div class="method-source-code" id="factorial_recursive-source">
+            <pre><span class="ruby-comment"># File factorial.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">factorial_recursive</span>(<span class="ruby-identifier">n</span>)
+  <span class="ruby-identifier">n</span>.<span class="ruby-identifier">zero?</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">factorial_recursive</span>(<span class="ruby-identifier">n</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-factorial_reduce" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">factorial_reduce</span><span
+            class="method-args">(n)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Iterative with Range#reduce, requires Ruby 1.8.7</p>
+          
+          
+
+          
+          <div class="method-source-code" id="factorial_reduce-source">
+            <pre><span class="ruby-comment"># File factorial.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">factorial_reduce</span>(<span class="ruby-identifier">n</span>)
+  (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-identifier">n</span>).<span class="ruby-identifier">reduce</span>(<span class="ruby-value">:*</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-factorial_tail_recursive" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">factorial_tail_recursive</span><span
+            class="method-args">(n, prod = 1)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Tail-recursive</p>
+          
+          
+
+          
+          <div class="method-source-code" id="factorial_tail_recursive-source">
+            <pre><span class="ruby-comment"># File factorial.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">factorial_tail_recursive</span>(<span class="ruby-identifier">n</span>, <span class="ruby-identifier">prod</span> = <span class="ruby-value">1</span>)
+  <span class="ruby-identifier">n</span>.<span class="ruby-identifier">zero?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">prod</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">factorial_tail_recursive</span>(<span class="ruby-identifier">n</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">prod</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">n</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-iter_palindrome" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">iter_palindrome</span><span
+            class="method-args">(str)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="iter_palindrome-source">
+            <pre><span class="ruby-comment"># File palindrome.rb, line 1</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">iter_palindrome</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">mid</span> = <span class="ruby-identifier">str</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>
+  (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">mid</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">!=</span> <span class="ruby-identifier">str</span>[<span class="ruby-operator">-</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>)]
+      <span class="ruby-keyword">return</span> <span class="ruby-node">&quot;#{str} is not a palindrome.&quot;</span> 
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-node">&quot;#{str} is a palindrome.&quot;</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-iteration" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">iteration</span><span
+            class="method-args">(num)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="iteration-source">
+            <pre><span class="ruby-comment"># File fib_matrix.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">iteration</span>(<span class="ruby-identifier">num</span>)
+  <span class="ruby-identifier">curr_num</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">next_num</span> = <span class="ruby-value">1</span>
+  <span class="ruby-identifier">num</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">curr_num</span>, <span class="ruby-identifier">next_num</span> = <span class="ruby-identifier">next_num</span>, <span class="ruby-identifier">curr_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">next_num</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">curr_num</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-matrix" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">matrix</span><span
+            class="method-args">(num)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="matrix-source">
+            <pre><span class="ruby-comment"># File fib_matrix.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">matrix</span>(<span class="ruby-identifier">num</span>)
+  (<span class="ruby-constant">FIB_MATRIX</span> <span class="ruby-operator">**</span> ( <span class="ruby-identifier">num</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>))[<span class="ruby-value">0</span>,<span class="ruby-value">0</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-palindrome" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">palindrome</span><span
+            class="method-args">(word)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="palindrome-source">
+            <pre><span class="ruby-comment"># File palindrome.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">palindrome</span>(<span class="ruby-identifier">word</span>)
+  <span class="ruby-identifier">mid</span> = <span class="ruby-identifier">word</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>
+  (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">mid</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">letter</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">word</span>[<span class="ruby-identifier">letter</span>] <span class="ruby-operator">!=</span> <span class="ruby-identifier">word</span>[<span class="ruby-operator">-</span>(<span class="ruby-identifier">letter</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>)]
+      <span class="ruby-keyword">return</span> <span class="ruby-node">&quot;#{word} is not a palindrome.&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-node">&quot;#{word} is a palindrome.&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
